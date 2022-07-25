@@ -8,4 +8,5 @@ class BASIC_api_test(unittest.TestCase):
         self.assertTrue(output.status_code == 200)
     def test_login(self):
         self.assertTrue(output.json()["login"] == "dronmorse")
-
+    def test_value(self):
+        self.assertAlmostEqual(output.json()["followers"], 0)
